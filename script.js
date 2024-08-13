@@ -21,8 +21,8 @@ function applyLanguage() {
             element.textContent = element.getAttribute('data-lang-fa');
             document.documentElement.setAttribute('lang', 'fa');
             langText.textContent = '🇮🇷 فارسی';
-            fileLabelTitle.style.fontSize = '20px';
-            fileLabelSubtitle.style.fontSize = '14px';
+            fileLabelTitle.style.fontSize = '18px';
+            fileLabelSubtitle.style.fontSize = '12px';
         } else {
             footerFa.style.display = 'none';
             footerEn.style.display = 'block';

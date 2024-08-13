@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="images/heart1.webp" type="image/x-icon">
+</head>
+
+<body>
+    <div id="heartsContainer"></div>
+
+    <div id="fileInputContainer" class="file-input-container">
+        <div class="file-box">
+            <label for="fileInput" class="file-label">
+                <h1 id="file-label-title" data-lang-en="Select one of your favorite pictures 😍"
+                    data-lang-fa="یکی از عکس های قشنگت رو انتخاب کن 😍"></h1>
+                <span id="file-label-subtitle" data-lang-en="Click on this box or press Enter to choose a file"
+                    data-lang-fa="روی این باکس کلیک کن یا اینتر بزن تا بتونی انتخاب کنی"></span>
+            </label>
+            <input type="file" id="fileInput" accept="image/*" onchange="handleFileSelect()" class="file-input">
+        </div>
+    </div>
+
+    <div class="language-switcher">
+        <button id="switch-lang" onclick="toggleLanguage()">
+            <span id="lang-text">فارسی🇮🇷</span>
+        </button>
+    </div>
+
+    <div class="container" id="imageContainer" style="display:none;">
+        <label for="imageSelector">
+            <h1 id="name2">240p</h1>
+        </label>
+        <input type="range" min="1" max="5" value="1" class="slider" id="imageSelector" onchange="changeImage()">
+        <div class="image-container">
+            <img id="displayedImage" src="images/heart1.webp" alt="عکس">
+        </div>
+    </div>
+
+    <footer>
+        <div id="footer-fa" class="footer-content" dir="rtl">
+            <p>
+                <div class="block">
+                    <span>ساخته شده توسط</span>
+                    <a href="https://github.com/ErfanRazzaz" target="_blank">عرفان رزاز</a>
+                </div>
+                <div class="block">
+                    <span>خوشحال میشم به پروژه من استار بدید :)</span>
+                    <a href="https://github.com/ErfanRazzaz/LoveSlider" target="_blank" class="project-link">مخزن پروژه</a>
+                </div>
+            </p>
+        </div>
+        <div id="footer-en" class="footer-content" style="display: none;">
+            <p>
+                <div class="block">
+                    <span>Created by</span>
+                    <a href="https://github.com/ErfanRazzaz" target="_blank">Erfan Razzaz</a>
+                </div>
+                <div class="block">
+                    <span>Give me a star!</span>
+                    <a href="https://github.com/ErfanRazzaz/LoveSlider" target="_blank" class="project-link">Project Repository</a>                    
+                </div>
+            </p>
+        </div>
+    </footer>
+
+
+</body>
+<script src="script.js"></script>
+
+</html>

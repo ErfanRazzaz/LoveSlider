@@ -1,0 +1,235 @@
+@font-face {
+    font-family: Yekan;
+    src: url(fonts/IRYekan.ttf);
+}
+
+@font-face {
+    font-family: North;
+    src: url(fonts/North\ Type\ -\ NTF-Grand\ Bold.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+
+body {
+    font-family: Yekan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(-45deg, #880d1e, #dd2d4a, #f49cbb, #cbeef3);
+    background-size: 300% 300%;
+    animation: gradient 15s ease infinite;
+    flex-direction: column;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.file-input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.file-box {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.file-box:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.file-label {
+    cursor: pointer;
+    color: #555;
+}
+
+.file-label h1 {
+    margin: 0;
+    color: #333;
+    font-size: 20px;
+}
+
+.file-label span {
+    display: block;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #777;
+}
+
+.file-input {
+    display: none; 
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: none; 
+}
+
+h1 {
+    color: #333;
+    transition: opacity 0.5s ease;
+    font-family: North;
+    font-size: 3rem;
+}
+
+.image-container {
+    margin-top: 20px;
+}
+
+img {
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.slider {
+    background-color: red;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+#heartsContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    display: none; 
+}
+
+.heart {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url('images/heart1.webp');
+    background-size: cover;
+    opacity: 0.8;
+    top: 20%;
+    animation: float 8s infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-200px) rotate(180deg);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(0) rotate(360deg);
+        opacity: 1;
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 15px;
+    box-shadow: 0 -8px 8px rgba(0, 0, 0, 0.3);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .project-link {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+footer span {
+    margin-bottom: 5px;
+}
+
+.block {
+    display: block;
+}
+
+.language-switcher {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.language-switcher button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.language-switcher button img {
+    width: 20px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+.language-switcher button:hover {
+    background-color: #0056b3;
+}
+
+.language-switcher button #lang-text {
+    font-size: 14px;
+}

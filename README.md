@@ -1,5 +1,7 @@
 # LoveSlider
 
+[**Switch to Persian 🇮🇷**](README.fa.md)
+
 Welcome to the Love Project! 🎉 This project allows users to select and display images with different resolutions, with a special feature to add a custom image at the highest resolution.
 
 ## Features

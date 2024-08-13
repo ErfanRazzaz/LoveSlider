@@ -5,6 +5,46 @@ function toggleLanguage() {
     applyLanguage();
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+    const slider = document.getElementById('imageSelector');
+    const image = document.getElementById('displayedImage');
+    let isDragging = false;
+
+    function startDragging() {
+        isDragging = true;
+    }
+
+    function stopDragging() {
+        isDragging = false;
+    }
+
+    function handleDrag(clientX) {
+        const rect = slider.getBoundingClientRect();
+        const offsetX = clientX - rect.left;
+        const percentage = offsetX / rect.width;
+        const value = Math.min(Math.max(percentage, 0), 1) * (slider.max - slider.min) + parseInt(slider.min);
+
+        slider.value = Math.round(value);
+        changeImage();
+    }
+
+    slider.addEventListener('mousedown', startDragging);
+    image.addEventListener('mousedown', startDragging);
+    slider.addEventListener('touchstart', startDragging);
+    image.addEventListener('touchstart', startDragging);
+
+    document.addEventListener('touchmove', (event) => {
+        if (isDragging) {
+            handleDrag(event.touches[0].clientX);
+        }
+    });
+
+    document.addEventListener('mouseup', stopDragging);
+    document.addEventListener('touchend', stopDragging);
+
+    changeImage();
+});
+
 function applyLanguage() {
     const footerFa = document.getElementById('footer-fa');
     const footerEn = document.getElementById('footer-en');

@@ -22,7 +22,6 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    overflow: hidden;
     position: relative;
     background: linear-gradient(-45deg, #880d1e, #dd2d4a, #f49cbb, #cbeef3);
     background-size: 300% 300%;

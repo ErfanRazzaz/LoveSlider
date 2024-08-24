@@ -19,7 +19,7 @@ Welcome to the Love Project! 🎉 This project allows users to select and displa
 
 ## Live Demo
 
-[Click here to see the live demo](https://your-live-demo-link.com)
+[Click here to see the live demo](https://erfanrazzaz.github.io/LoveSlider/)
 
 ## Contributing
 

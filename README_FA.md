@@ -19,7 +19,7 @@
 
 ## نسخه زنده
 
-[برای مشاهده نسخه زنده کلیک کنید](https://your-live-demo-link.com)
+[برای مشاهده نسخه زنده کلیک کنید](https://erfanrazzaz.github.io/LoveSlider/)
 
 ## مشارکت
 
